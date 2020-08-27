@@ -1,0 +1,154 @@
+// Main CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+// Colors
+
+$primary-color: #c4c4c4;
+$secondary-color: #dddddd;
+$black-color: #010101;
+
+// Utility
+
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: $primary-color;
+  border: 3px solid $black-color;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: $black-color;
+  box-shadow: 5px 5px $black-color;
+
+  &-sm {
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  &-xs {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.825rem;
+    box-shadow: 3px 3px $black-color;
+  }
+}
+
+// Sections
+.container {
+  margin: 0 auto;
+  max-width: 1040px;
+  padding: 0 10px;
+}
+
+.header {
+  padding: 0.5rem 0;
+  background-color: $primary-color;
+  border-bottom: 5px solid $black-color;
+
+  &__logo {
+    height: 50px;
+    // background-color: #fff;
+    // padding: 2px;
+    // border: 4px solid #000;
+    // border-radius: 8px;
+  }
+
+  &__heading {
+    margin-left: 1rem;
+  }
+
+  &__counter {
+    color: $black-color;
+    font-size: 1rem;
+    margin-left: auto;
+
+    span {
+      font-weight: 900;
+      font-size: 1.25rem;
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.add-note {
+  background-image: linear-gradient(
+    45deg,
+    #010101 4.55%,
+    #ffffff 4.55%,
+    #ffffff 50%,
+    #010101 50%,
+    #010101 54.55%,
+    #ffffff 54.55%,
+    #ffffff 100%
+  );
+  background-size: 31.11px 31.11px;
+  padding: 2rem 0;
+
+  .text-area {
+    border: 5px solid $black-color;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem;
+    padding: 0.5rem;
+
+    &::placeholder {
+      color: red;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.notes {
+  padding: 2rem 0;
+  border-top: 5px solid $black-color;
+  background-image: radial-gradient(#fafafa 20%, transparent 20%),
+    radial-gradient(#fafafa 20%, transparent 20%);
+  background-color: $primary-color;
+  background-position: 0 0, 3px 3px;
+  background-size: 6px 6px;
+
+  &__heading {
+    margin-bottom: 1rem;
+  }
+}
+
+.note {
+  border: 3px solid $black-color;
+  box-shadow: 5px 5px $black-color;
+  background-color: #fafafa;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+  }
+
+  &__text {
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    margin-left: auto;
+  }
+}
