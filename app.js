@@ -1,4 +1,5 @@
 const notesContainer = document.querySelector('.notes__container');
+const numOfNotes = document.querySelector('#num-of-notes');
 
 myNotes = [
   {
@@ -51,5 +52,7 @@ retriveNotes.forEach((note) => {
 
   notesContainer.appendChild(noteElement);
 });
+
+numOfNotes.textContent = retriveNotes.length;
 
 console.log(retriveNotes);
