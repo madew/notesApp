@@ -10,6 +10,9 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: 'IBM Plex Mono', monospace;
 }
 
@@ -116,6 +119,7 @@ $black-color: #010101;
 }
 
 .notes {
+  flex: 1 1 auto;
   padding: 2rem 0;
   border-top: 5px solid $black-color;
   background-image: radial-gradient(#fafafa 20%, transparent 20%),
